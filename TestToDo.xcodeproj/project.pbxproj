@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		A27CACDD24C380EF00C1AF3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CACDC24C380EF00C1AF3B /* AppDelegate.swift */; };
 		A27CACDF24C380EF00C1AF3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CACDE24C380EF00C1AF3B /* SceneDelegate.swift */; };
-		A27CACE124C380EF00C1AF3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CACE024C380EF00C1AF3B /* ViewController.swift */; };
 		A27CACE424C380EF00C1AF3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A27CACE224C380EF00C1AF3B /* Main.storyboard */; };
 		A27CACE624C380F100C1AF3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A27CACE524C380F100C1AF3B /* Assets.xcassets */; };
 		A27CACE924C380F100C1AF3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A27CACE724C380F100C1AF3B /* LaunchScreen.storyboard */; };
+		A27CACF124C3812E00C1AF3B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CACF024C3812E00C1AF3B /* Category.swift */; };
+		A27CACF324C3814200C1AF3B /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CACF224C3814200C1AF3B /* Items.swift */; };
+		A27CACF524C3815900C1AF3B /* AddItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CACF424C3815900C1AF3B /* AddItems.swift */; };
+		A27CACF824C3821400C1AF3B /* ModelData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A27CACF624C3821400C1AF3B /* ModelData.xcdatamodeld */; };
+		A27CAD0024C3A6CB00C1AF3B /* CategoryPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CACFF24C3A6CB00C1AF3B /* CategoryPhoto.swift */; };
+		A27CAD0224C3A6E000C1AF3B /* ItemsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CAD0124C3A6E000C1AF3B /* ItemsPhoto.swift */; };
+		A27CAD0424C3A70000C1AF3B /* AddItemsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CAD0324C3A70000C1AF3B /* AddItemsPhoto.swift */; };
+		A27CAD0724C3B43F00C1AF3B /* ShowPigeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CAD0624C3B43F00C1AF3B /* ShowPigeText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A27CACD924C380EF00C1AF3B /* TestToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A27CACDC24C380EF00C1AF3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A27CACDE24C380EF00C1AF3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A27CACE024C380EF00C1AF3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A27CACE324C380EF00C1AF3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A27CACE524C380F100C1AF3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A27CACE824C380F100C1AF3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A27CACEA24C380F100C1AF3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A27CACF024C3812E00C1AF3B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		A27CACF224C3814200C1AF3B /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		A27CACF424C3815900C1AF3B /* AddItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItems.swift; sourceTree = "<group>"; };
+		A27CACF724C3821400C1AF3B /* ModelData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ModelData.xcdatamodel; sourceTree = "<group>"; };
+		A27CACFF24C3A6CB00C1AF3B /* CategoryPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPhoto.swift; sourceTree = "<group>"; };
+		A27CAD0124C3A6E000C1AF3B /* ItemsPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsPhoto.swift; sourceTree = "<group>"; };
+		A27CAD0324C3A70000C1AF3B /* AddItemsPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemsPhoto.swift; sourceTree = "<group>"; };
+		A27CAD0624C3B43F00C1AF3B /* ShowPigeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPigeText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,78 @@
 		A27CACDB24C380EF00C1AF3B /* TestToDo */ = {
 			isa = PBXGroup;
 			children = (
-				A27CACDC24C380EF00C1AF3B /* AppDelegate.swift */,
-				A27CACDE24C380EF00C1AF3B /* SceneDelegate.swift */,
-				A27CACE024C380EF00C1AF3B /* ViewController.swift */,
-				A27CACE224C380EF00C1AF3B /* Main.storyboard */,
-				A27CACE524C380F100C1AF3B /* Assets.xcassets */,
-				A27CACE724C380F100C1AF3B /* LaunchScreen.storyboard */,
+				A27CACF924C3A5E700C1AF3B /* Delegate */,
+				A27CACFA24C3A5FE00C1AF3B /* Controller */,
+				A27CACFC24C3A66600C1AF3B /* Views */,
+				A27CACFD24C3A67A00C1AF3B /* Data */,
+				A27CACFE24C3A68800C1AF3B /* Supporting */,
 				A27CACEA24C380F100C1AF3B /* Info.plist */,
 			);
 			path = TestToDo;
+			sourceTree = "<group>";
+		};
+		A27CACF924C3A5E700C1AF3B /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				A27CACDC24C380EF00C1AF3B /* AppDelegate.swift */,
+				A27CACDE24C380EF00C1AF3B /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		A27CACFA24C3A5FE00C1AF3B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A27CACFB24C3A64B00C1AF3B /* TEXT */,
+				A27CAD0524C3A70A00C1AF3B /* PHOTO */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A27CACFB24C3A64B00C1AF3B /* TEXT */ = {
+			isa = PBXGroup;
+			children = (
+				A27CACF024C3812E00C1AF3B /* Category.swift */,
+				A27CACF224C3814200C1AF3B /* Items.swift */,
+				A27CACF424C3815900C1AF3B /* AddItems.swift */,
+				A27CAD0624C3B43F00C1AF3B /* ShowPigeText.swift */,
+			);
+			path = TEXT;
+			sourceTree = "<group>";
+		};
+		A27CACFC24C3A66600C1AF3B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A27CACE224C380EF00C1AF3B /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A27CACFD24C3A67A00C1AF3B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A27CACF624C3821400C1AF3B /* ModelData.xcdatamodeld */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A27CACFE24C3A68800C1AF3B /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				A27CACE524C380F100C1AF3B /* Assets.xcassets */,
+				A27CACE724C380F100C1AF3B /* LaunchScreen.storyboard */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		A27CAD0524C3A70A00C1AF3B /* PHOTO */ = {
+			isa = PBXGroup;
+			children = (
+				A27CACFF24C3A6CB00C1AF3B /* CategoryPhoto.swift */,
+				A27CAD0124C3A6E000C1AF3B /* ItemsPhoto.swift */,
+				A27CAD0324C3A70000C1AF3B /* AddItemsPhoto.swift */,
+			);
+			path = PHOTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +215,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A27CACE124C380EF00C1AF3B /* ViewController.swift in Sources */,
+				A27CACF524C3815900C1AF3B /* AddItems.swift in Sources */,
+				A27CACF324C3814200C1AF3B /* Items.swift in Sources */,
 				A27CACDD24C380EF00C1AF3B /* AppDelegate.swift in Sources */,
+				A27CAD0424C3A70000C1AF3B /* AddItemsPhoto.swift in Sources */,
+				A27CAD0724C3B43F00C1AF3B /* ShowPigeText.swift in Sources */,
+				A27CAD0024C3A6CB00C1AF3B /* CategoryPhoto.swift in Sources */,
+				A27CACF824C3821400C1AF3B /* ModelData.xcdatamodeld in Sources */,
 				A27CACDF24C380EF00C1AF3B /* SceneDelegate.swift in Sources */,
+				A27CACF124C3812E00C1AF3B /* Category.swift in Sources */,
+				A27CAD0224C3A6E000C1AF3B /* ItemsPhoto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +422,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A27CACF624C3821400C1AF3B /* ModelData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A27CACF724C3821400C1AF3B /* ModelData.xcdatamodel */,
+			);
+			currentVersion = A27CACF724C3821400C1AF3B /* ModelData.xcdatamodel */;
+			path = ModelData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A27CACD124C380EF00C1AF3B /* Project object */;
 }
