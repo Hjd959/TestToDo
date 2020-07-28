@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class AddItems: UIViewController  {
     
+    var toDo = ITEMS()
     
     // This is For Inhernens VC
     var toDoTableVC : Items? = nil
@@ -23,9 +25,10 @@ class AddItems: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        dismissKey()
     }
-    
+
+
     //MARK:- Add new Text
     
     @IBAction func addTapped(_ sender: UIButton)
@@ -42,4 +45,18 @@ class AddItems: UIViewController  {
         
     }
     
+}
+
+
+extension UIViewController {
+func dismissKey()
+{
+let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(UIViewController.dismissKeyboard))
+tap.cancelsTouchesInView = false
+view.addGestureRecognizer(tap)
+}
+@objc func dismissKeyboard()
+{
+view.endEditing(true)
+}
 }

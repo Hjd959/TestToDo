@@ -68,19 +68,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iW0-we-v3D">
-                                <rect key="frame" x="121" y="749" width="173" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="dlete:" destination="p7Q-eO-VFY" eventType="touchUpInside" id="NKS-Vp-Gvd"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Z7Y-vn-TFe"/>
                     </view>
-                    <navigationItem key="navigationItem" id="gFJ-gq-psS"/>
+                    <navigationItem key="navigationItem" id="gFJ-gq-psS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="4hd-Ne-gqL">
+                            <connections>
+                                <action selector="de:" destination="p7Q-eO-VFY" id="PoW-yd-VZK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bigText" destination="pzl-qc-dLD" id="hrB-pK-y8w"/>
                         <outlet property="titelText" destination="Bhj-Gc-5jy" id="Th0-YU-FEv"/>

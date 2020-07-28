@@ -27,7 +27,7 @@ class Items: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        tableView.reloadData()
     }
     
     // MARK: - Table view data source
@@ -59,6 +59,11 @@ class Items: UITableViewController {
     {
         let slelectedItem = itemArray[indexPath.row]
         performSegue(withIdentifier: "goToShow", sender: slelectedItem)
+        
+//        context.delete(itemArray[indexPath.row])
+//        itemArray.remove(at: indexPath.row)
+//        saveItems()
+//        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     // This ReationShip With Add TEXT
@@ -76,12 +81,7 @@ class Items: UITableViewController {
                 completVC.toDoTableVC = self
             }
         }
-        
-        
 
-
-
-        
     }
     
 

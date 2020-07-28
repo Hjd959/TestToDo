@@ -14,13 +14,15 @@ class ShowPigeText: UIViewController {
     @IBOutlet weak var titelText: UILabel!
     @IBOutlet weak var bigText: UITextView!
     
+        var toDo = ITEMS()
+    
     // This is For Inhernens VC
     var toDoTableVC : Items? = nil
-    
+ 
     // This for ( Read , Write , Save .. data (Defuntion)
        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    var toDo = ITEMS()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,25 +30,18 @@ class ShowPigeText: UIViewController {
         bigText.text = toDo.textView
     }
     
-
-    func deleteRecords() {
-        let delegate = UIApplication.shared.delegate as! AppDelegate
-        let context = delegate.persistentContainer.viewContext
-
-        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "titelPhoto")
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
-        
-
-        do {
-            try context.execute(deleteRequest)
-            try context.save()
-        } catch {
-            print ("There was an error")
-        }
-    }
-
-    @IBAction func dlete(_ sender: UIButton)
+    @IBAction func de(_ sender: UIBarButtonItem)
     {
-      deleteRecords()
+
+                if  toDo != nil {
+                toDo.perntCategoryRELATIONSHIP = toDoTableVC?.selectedCategory
+                    context.delete(toDo)
+                toDoTableVC?.tableView.reloadData()
+                toDoTableVC?.tableView.reloadData()
+                
+        }
+        toDoTableVC?.tableView.reloadData()
+        navigationController?.popViewController(animated: true)
     }
+
 }
