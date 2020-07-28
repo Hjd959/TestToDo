@@ -11,7 +11,7 @@ import CoreData
 
 class ShowPigeText: UIViewController {
 
-    @IBOutlet weak var titelText: UILabel!
+   
     @IBOutlet weak var bigText: UITextView!
     
         var toDo = ITEMS()
@@ -26,7 +26,8 @@ class ShowPigeText: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        titelText.text = toDo.titelText
+     //   titelText.text = toDo.titelText
+        title = toDo.titelText
         bigText.text = toDo.textView
     }
     

@@ -20,6 +20,9 @@ class Category: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       // self.tableView.background = UIImage(named: "Dark")
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "Dark"))
+        
         loadCategories()
     }
     
@@ -33,7 +36,13 @@ class Category: UITableViewController {
     // this is for reload Data ( Cell )
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
+        
+      //  cell.backgroundView = UIImageView(image: UIImage(named: "Dark"))
+        cell.backgroundColor = .clear
+      //  cell.backgroundColor = UIColor(white: 1, alpha: 0.5)
         cell.textLabel?.text = CategoryArray[indexPath.row].nameFolder
+        
+        
         return cell
     }
     
@@ -43,7 +52,9 @@ class Category: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let didselct = CategoryArray[indexPath.row]
+        
         // this when you Select ( Defintion Cell Tabel View )
+
         performSegue(withIdentifier: "goToItems", sender: didselct)
         
     }
@@ -51,7 +62,9 @@ class Category: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! Items
         if let indexPath = tableView.indexPathForSelectedRow {
-            destinationVC.selectedCategory = CategoryArray[indexPath.row]
+        destinationVC.selectedCategory = CategoryArray[indexPath.row]
+            destinationVC.title = CategoryArray[indexPath.row].nameFolder
+ 
             
         }
         
@@ -116,7 +129,6 @@ class Category: UITableViewController {
          let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
          let note = CategoryArray[indexPath.row]
-//      
 
          if editingStyle == .delete {
             managedContext.delete(note)

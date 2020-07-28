@@ -27,6 +27,8 @@ class Items: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "Dark"))
+        title = title
         tableView.reloadData()
     }
     
@@ -44,7 +46,8 @@ class Items: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemsCell", for: indexPath)
         
         let item = itemArray[indexPath.row]
-        
+     //   cell.backgroundView = UIImageView(image: UIImage(named: "Dark"))
+        cell.backgroundColor = .clear
         cell.textLabel?.text = item.titelText
         
         return cell
@@ -60,11 +63,17 @@ class Items: UITableViewController {
         let slelectedItem = itemArray[indexPath.row]
         performSegue(withIdentifier: "goToShow", sender: slelectedItem)
         
-//        context.delete(itemArray[indexPath.row])
-//        itemArray.remove(at: indexPath.row)
-//        saveItems()
-//        tableView.deselectRow(at: indexPath, animated: true)
+
     }
+    
+//           let destinationVC = segue.destination as! Items
+//           if let indexPath = tableView.indexPathForSelectedRow {
+//           destinationVC.selectedCategory = CategoryArray[indexPath.row]
+//               destinationVC.title = CategoryArray[indexPath.row].nameFolder
+//
+//
+//           }
+           
     
     // This ReationShip With Add TEXT
     
@@ -72,13 +81,19 @@ class Items: UITableViewController {
     {
         if let destinationVC = segue.destination as? AddItems
         {
+           
             destinationVC.toDoTableVC = self
+          
+           
         }
         
         if let completVC = segue.destination as? ShowPigeText {
+            
+        
             if let toDo = sender as? ITEMS {
                 completVC.toDo = toDo
                 completVC.toDoTableVC = self
+             
             }
         }
 
@@ -127,32 +142,4 @@ class Items: UITableViewController {
         
     }
     
-    // MARK: - Add New Text Single Titel
-    //    @IBAction func SA(_ sender: UIBarButtonItem)
-    //    {
-    //                var textField = UITextField()
-    //
-    //                let aleart = UIAlertController(title: "Add New Todoey Item ", message: "", preferredStyle: .alert)
-    //                let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
-    //
-    //
-    //
-    //                    let newItem = ITEMS(context: self.context)
-    //                    newItem.titelText = textField.text!
-    //                    newItem.perntCategoryRELATIONSHIP = self.selectedCategory
-    //
-    //
-    //                    self.itemArray.append(newItem)
-    //                      self.tableView.reloadData()
-    //
-    //
-    //                }
-    //                aleart.addTextField { (alertTextField) in
-    //                    alertTextField.placeholder = "Create new Item"
-    //                    textField = alertTextField
-    //                }
-    //
-    //                aleart.addAction(action)
-    //                present(aleart, animated: true, completion: nil)
-    //    }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A22A8ADF24D01BC300893469 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22A8ADE24D01BC300893469 /* HomeView.swift */; };
 		A27CACDD24C380EF00C1AF3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CACDC24C380EF00C1AF3B /* AppDelegate.swift */; };
 		A27CACDF24C380EF00C1AF3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CACDE24C380EF00C1AF3B /* SceneDelegate.swift */; };
 		A27CACE424C380EF00C1AF3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A27CACE224C380EF00C1AF3B /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A22A8ADE24D01BC300893469 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A27CACD924C380EF00C1AF3B /* TestToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A27CACDC24C380EF00C1AF3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A27CACDE24C380EF00C1AF3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				A27CACFB24C3A64B00C1AF3B /* TEXT */,
 				A27CAD0524C3A70A00C1AF3B /* PHOTO */,
+				A22A8ADE24D01BC300893469 /* HomeView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				A27CACDD24C380EF00C1AF3B /* AppDelegate.swift in Sources */,
 				A27CAD0424C3A70000C1AF3B /* AddItemsPhoto.swift in Sources */,
 				A27CAD0724C3B43F00C1AF3B /* ShowPigeText.swift in Sources */,
+				A22A8ADF24D01BC300893469 /* HomeView.swift in Sources */,
 				A27CAD0024C3A6CB00C1AF3B /* CategoryPhoto.swift in Sources */,
 				A27CACF824C3821400C1AF3B /* ModelData.xcdatamodeld in Sources */,
 				A27CACDF24C380EF00C1AF3B /* SceneDelegate.swift in Sources */,
