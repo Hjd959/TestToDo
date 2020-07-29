@@ -10,7 +10,7 @@
     </entity>
     <entity name="ITEMS" representedClassName="ITEMS" syncable="YES" codeGenerationType="class">
         <attribute name="textView" optional="YES" attributeType="String"/>
-        <attribute name="titelText" attributeType="String"/>
+        <attribute name="titelText" optional="YES" attributeType="String"/>
         <relationship name="perntCategoryRELATIONSHIP" maxCount="1" deletionRule="Nullify" destinationEntity="CATEGORY" inverseName="itemsRELATIONSHIP" inverseEntity="CATEGORY"/>
     </entity>
     <entity name="ITEMSPHOTO" representedClassName="ITEMSPHOTO" syncable="YES" codeGenerationType="class">

@@ -143,3 +143,32 @@ class Items: UITableViewController {
     }
     
 }
+
+
+    //MARK: - Search bar methods
+    @available(iOS 13.0, *)
+    extension Items: UISearchBarDelegate {
+        func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+
+
+            let request : NSFetchRequest<ITEMS> = ITEMS.fetchRequest()
+            print(searchBar.text!)
+
+            let predicate = NSPredicate(format: "titelText ITEMS[cd] %@", searchBar.text!)
+
+            request.sortDescriptors = [NSSortDescriptor(key:"titelText", ascending: true)]
+            loadItem(with: request , predicate: predicate)
+        }
+        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+            if searchBar.text?.count == 0 {
+                loadItem()
+                DispatchQueue.main.async {
+                    searchBar.resignFirstResponder()
+                }
+            }
+        }
+
+
+
+    }
+
