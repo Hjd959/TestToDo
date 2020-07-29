@@ -44,7 +44,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRd-p7-V7M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="475" y="5"/>
+            <point key="canvasLocation" x="345" y="372"/>
         </scene>
         <!--Show Pige Text-->
         <scene sceneID="t9Y-JO-JYW">
@@ -91,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FRU-3L-ruV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1314.4927536231885" y="-682.36607142857144"/>
+            <point key="canvasLocation" x="1070" y="-309"/>
         </scene>
         <!--Items-->
         <scene sceneID="xiD-gK-41h">
@@ -136,7 +136,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sMf-0L-RFi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1274" y="5"/>
+            <point key="canvasLocation" x="1070" y="372"/>
         </scene>
         <!--Add Items-->
         <scene sceneID="gHI-6h-88Q">
@@ -201,9 +201,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tiT-sK-SHy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2153.6231884057975" y="4.6875"/>
+            <point key="canvasLocation" x="1819" y="372"/>
         </scene>
-        <!--Home View-->
+        <!--Nots-->
         <scene sceneID="r7R-r9-Pdg">
             <objects>
                 <viewController id="arD-Kn-zes" customClass="HomeView" customModule="TestToDo" customModuleProvider="target" sceneMemberID="viewController">
@@ -243,7 +243,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6FK-kL-5ds"/>
                     </view>
-                    <navigationItem key="navigationItem" id="HV8-vy-0qM"/>
+                    <navigationItem key="navigationItem" title="Nots" id="HV8-vy-0qM"/>
                     <connections>
                         <outlet property="photo" destination="zKo-NM-Njc" id="3Bi-km-rm8"/>
                         <outlet property="text" destination="zeH-0p-ORM" id="bmo-vi-jNJ"/>
@@ -289,7 +289,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5wf-yX-YYx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="474" y="1414"/>
+            <point key="canvasLocation" x="346" y="1049"/>
         </scene>
         <!--Items Photo-->
         <scene sceneID="7eE-pP-TUs">
@@ -324,7 +324,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsO-bH-iBS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1316" y="1414"/>
+            <point key="canvasLocation" x="1070" y="1049"/>
         </scene>
         <!--Add Items Photo-->
         <scene sceneID="n5e-5f-ltz">
@@ -359,7 +359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSc-rJ-m6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2205.7971014492755" y="1413.6160714285713"/>
+            <point key="canvasLocation" x="1820" y="1049"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QRe-Yd-YJb">

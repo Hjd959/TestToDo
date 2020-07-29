@@ -37,8 +37,8 @@ class ShowPigeText: UIViewController {
                 if  toDo != nil {
                 toDo.perntCategoryRELATIONSHIP = toDoTableVC?.selectedCategory
                     context.delete(toDo)
-                toDoTableVC?.tableView.reloadData()
-                toDoTableVC?.tableView.reloadData()
+             //   toDoTableVC?.tableView.reloadData()
+             //   toDoTableVC?.tableView.reloadData()
                 
         }
         toDoTableVC?.tableView.reloadData()

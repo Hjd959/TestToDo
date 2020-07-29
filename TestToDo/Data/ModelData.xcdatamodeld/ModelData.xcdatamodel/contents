@@ -2,7 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CATEGORY" representedClassName="CATEGORY" syncable="YES" codeGenerationType="class">
         <attribute name="nameFolder" attributeType="String"/>
-        <relationship name="itemsRELATIONSHIP" toMany="YES" deletionRule="Nullify" destinationEntity="ITEMS" inverseName="perntCategoryRELATIONSHIP" inverseEntity="ITEMS"/>
+        <relationship name="itemsRELATIONSHIP" toMany="YES" deletionRule="Cascade" destinationEntity="ITEMS" inverseName="perntCategoryRELATIONSHIP" inverseEntity="ITEMS"/>
     </entity>
     <entity name="CATEGORYPHOTO" representedClassName="CATEGORYPHOTO" syncable="YES" codeGenerationType="class">
         <attribute name="nameFolder" attributeType="String"/>
@@ -18,9 +18,9 @@
         <relationship name="perntREATIONSHIPphoto" maxCount="1" deletionRule="Nullify" destinationEntity="CATEGORYPHOTO" inverseName="itemsRELATIONSHIPphoto" inverseEntity="CATEGORYPHOTO"/>
     </entity>
     <elements>
-        <element name="CATEGORY" positionX="-63" positionY="-18" width="128" height="73"/>
-        <element name="ITEMS" positionX="-54" positionY="-9" width="128" height="88"/>
-        <element name="CATEGORYPHOTO" positionX="-45" positionY="36" width="128" height="73"/>
-        <element name="ITEMSPHOTO" positionX="-36" positionY="45" width="128" height="73"/>
+        <element name="CATEGORY" positionX="-368.89453125" positionY="-1.27734375" width="128" height="73"/>
+        <element name="CATEGORYPHOTO" positionX="133.46875" positionY="236.55859375" width="128" height="73"/>
+        <element name="ITEMS" positionX="-147.8828125" positionY="-65.33203125" width="128" height="88"/>
+        <element name="ITEMSPHOTO" positionX="-184.75390625" positionY="243.4140625" width="128" height="73"/>
     </elements>
 </model>
