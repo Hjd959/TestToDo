@@ -154,19 +154,19 @@ class Items: UITableViewController {
             let request : NSFetchRequest<ITEMS> = ITEMS.fetchRequest()
             print(searchBar.text!)
 
-            let predicate = NSPredicate(format: "titelText ITEMS[cd] %@", searchBar.text!)
+           let predicate = NSPredicate(format: "titelText CONTAINS[cd] %@", searchBar.text!)
 
             request.sortDescriptors = [NSSortDescriptor(key:"titelText", ascending: true)]
             loadItem(with: request , predicate: predicate)
         }
-        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-            if searchBar.text?.count == 0 {
-                loadItem()
-                DispatchQueue.main.async {
-                    searchBar.resignFirstResponder()
-                }
-            }
-        }
+       func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+          if searchBar.text?.count == 0 {
+               loadItem()
+               DispatchQueue.main.async {
+                   searchBar.resignFirstResponder()
+               }
+}
+       }
 
 
 

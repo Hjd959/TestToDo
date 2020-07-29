@@ -34,11 +34,10 @@ class ShowPigeText: UIViewController {
     @IBAction func de(_ sender: UIBarButtonItem)
     {
 
-                if  toDo != nil {
+                if toDo != nil {
                 toDo.perntCategoryRELATIONSHIP = toDoTableVC?.selectedCategory
                     context.delete(toDo)
-             //   toDoTableVC?.tableView.reloadData()
-             //   toDoTableVC?.tableView.reloadData()
+
                 
         }
         toDoTableVC?.tableView.reloadData()
