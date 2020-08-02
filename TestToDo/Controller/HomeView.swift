@@ -15,13 +15,31 @@ class HomeView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-   
+       
          text.layer.cornerRadius = 18
          photo.layer.cornerRadius = 18
         
     }
     
+    
+    // الصوره كامله بدون اطار 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
+        // Make the navigation bar background clear
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        // Restore the navigation bar to default
+        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+        navigationController?.navigationBar.shadowImage = nil
+    }
    
 
 }
+

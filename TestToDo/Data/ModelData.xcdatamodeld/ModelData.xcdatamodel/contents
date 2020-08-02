@@ -6,7 +6,7 @@
     </entity>
     <entity name="CATEGORYPHOTO" representedClassName="CATEGORYPHOTO" syncable="YES" codeGenerationType="class">
         <attribute name="nameFolder" attributeType="String"/>
-        <relationship name="itemsRELATIONSHIPphoto" toMany="YES" deletionRule="Nullify" destinationEntity="ITEMSPHOTO" inverseName="perntREATIONSHIPphoto" inverseEntity="ITEMSPHOTO"/>
+        <relationship name="itemsRELATIONSHIPphoto" toMany="YES" deletionRule="Cascade" destinationEntity="ITEMSPHOTO" inverseName="perntREATIONSHIPphoto" inverseEntity="ITEMSPHOTO"/>
     </entity>
     <entity name="ITEMS" representedClassName="ITEMS" syncable="YES" codeGenerationType="class">
         <attribute name="textView" optional="YES" attributeType="String"/>
@@ -14,6 +14,7 @@
         <relationship name="perntCategoryRELATIONSHIP" maxCount="1" deletionRule="Nullify" destinationEntity="CATEGORY" inverseName="itemsRELATIONSHIP" inverseEntity="CATEGORY"/>
     </entity>
     <entity name="ITEMSPHOTO" representedClassName="ITEMSPHOTO" syncable="YES" codeGenerationType="class">
+        <attribute name="imageDB" optional="YES" attributeType="Binary"/>
         <attribute name="titelPhoto" attributeType="String"/>
         <relationship name="perntREATIONSHIPphoto" maxCount="1" deletionRule="Nullify" destinationEntity="CATEGORYPHOTO" inverseName="itemsRELATIONSHIPphoto" inverseEntity="CATEGORYPHOTO"/>
     </entity>
@@ -21,6 +22,6 @@
         <element name="CATEGORY" positionX="-368.89453125" positionY="-1.27734375" width="128" height="73"/>
         <element name="CATEGORYPHOTO" positionX="133.46875" positionY="236.55859375" width="128" height="73"/>
         <element name="ITEMS" positionX="-147.8828125" positionY="-65.33203125" width="128" height="88"/>
-        <element name="ITEMSPHOTO" positionX="-184.75390625" positionY="243.4140625" width="128" height="73"/>
+        <element name="ITEMSPHOTO" positionX="-184.75390625" positionY="243.4140625" width="128" height="88"/>
     </elements>
 </model>

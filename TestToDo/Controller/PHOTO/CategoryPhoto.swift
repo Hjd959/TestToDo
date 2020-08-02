@@ -9,8 +9,11 @@
 import UIKit
 import CoreData
 
+@available(iOS 13.0, *)
 class CategoryPhoto: UITableViewController {
 
+    //MARK: - DATA BASE
+    
     // DataBase Array
      var CategoryArray = [CATEGORYPHOTO]()
      // This for ( Read , Write , Save .. data (Defuntion)
@@ -22,9 +25,31 @@ class CategoryPhoto: UITableViewController {
     {
         super.viewDidLoad()
         
+          // The Photo Table
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "2"))
+
           loadCategories()
 
     }
+    
+    //MARK:- Hide The Line For NavigationBar
+     
+     override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+         
+         // Make the navigation bar background clear
+         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+         navigationController?.navigationBar.shadowImage = UIImage()
+         navigationController?.navigationBar.isTranslucent = true
+     }
+     
+     override func viewWillDisappear(_ animated: Bool) {
+         super.viewWillDisappear(animated)
+         
+         // Restore the navigation bar to default
+         navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+         navigationController?.navigationBar.shadowImage = nil
+     }
 
     // MARK: - Table view data source
 
@@ -34,9 +59,14 @@ class CategoryPhoto: UITableViewController {
     }
 
     
+     // This is for reload Data ( Cell )
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
 
+        cell.textLabel?.textAlignment = .right
+        //  cell.backgroundView = UIImageView(image: UIImage(named: "Dark"))
+          cell.backgroundColor = .clear
+        //  cell.backgroundColor = UIColor(white: 1, alpha: 0.5)
         cell.textLabel?.text = CategoryArray[indexPath.row].nameFolder
 
         return cell
@@ -47,15 +77,21 @@ class CategoryPhoto: UITableViewController {
 
     // When You chick folder move to anthor Page
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "goToItems", sender: self)
+        
+          // this when you Select ( Defintion Cell Tabel View )
+         let didselct = CategoryArray[indexPath.row]
+        performSegue(withIdentifier: "goToItems", sender: didselct)
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
+     // MARK: - RelationShip  Between (Category & Items)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        
         let destinationVC = segue.destination as! ItemsPhoto
-
         if let indexPath = tableView.indexPathForSelectedRow {
             destinationVC.selectedCategory = CategoryArray[indexPath.row]
+            
+            // Title Move to New Item
+            destinationVC.title = CategoryArray[indexPath.row].nameFolder
         }
 
     }
@@ -86,34 +122,72 @@ class CategoryPhoto: UITableViewController {
        }
        
     
+    
+    // MARK:- Delete Category
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+
+         let noteEntity = "CATEGORYPHOTO" //Entity Name
+
+         let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+         let note = CategoryArray[indexPath.row]
+
+         if editingStyle == .delete {
+            managedContext.delete(note)
+
+            do {
+                try managedContext.save()
+            } catch let error as NSError {
+                print("Error While Deleting Note: \(error.userInfo)")
+            }
+
+         }
+    
+        //Code to Fetch New Data From The DB and Reload Table.
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: noteEntity)
+
+        do {
+            CategoryArray = try managedContext.fetch(fetchRequest) as! [CATEGORYPHOTO]
+            
+        } catch let error as NSError {
+            print("Error While Fetching Data From DBBBBB: \(error.userInfo)")
+        }
+        tableView.reloadData()
+    }
+    
+    // MARK: - Add New Categories to Tabel View as Aleart
     @IBAction func AddFolderPhoto(_ sender: UIBarButtonItem)
     {
         var textField = UITextField()
-        
-        let aleart = UIAlertController(title: "Add New Todoey Category ", message: "", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Add Category", style: .default) { (action) in
-            
-            
-            
-            let newCategory = CATEGORYPHOTO(context: self.context)
-            newCategory.nameFolder = textField.text!
-            
-            
-            self.CategoryArray.append(newCategory)
-            
-            self.saveCategory()
-            
-            
-        }
-        aleart.addAction(action)
-        
-        aleart.addTextField { (alertTextField) in
-            alertTextField.placeholder = "Create new Category"
-            textField = alertTextField
-        }
-        
-        
-        present(aleart, animated: true, completion: nil)
+             let refreshAlert = UIAlertController(title: "إضافة مجلد جديد", message: "", preferredStyle: UIAlertController.Style.alert)
+
+            let action = (UIAlertAction(title: "إضافه", style: .default, handler: { (action) in
+                 
+                 let newCategory = CATEGORYPHOTO(context: self.context)
+                 newCategory.nameFolder = textField.text!
+                 
+                 
+                 self.CategoryArray.append(newCategory)
+                 
+                 self.saveCategory()
+                 
+             }))
+             
+             refreshAlert.addAction(action)
+             
+             refreshAlert.addTextField { (alertTextField) in
+                 alertTextField.placeholder = "اسم المجلد"
+                 alertTextField.textAlignment = .center
+                 textField = alertTextField
+                 
+             }
+           
+             refreshAlert.addAction(UIAlertAction(title: "رجوع", style: .cancel, handler: { (action: UIAlertAction!) in
+                   print("Handle Cancel Logic here")
+             }))
+
+             present(refreshAlert, animated: true, completion: nil)
     }
     
 }

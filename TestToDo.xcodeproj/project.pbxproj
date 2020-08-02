@@ -21,11 +21,12 @@
 		A27CAD0224C3A6E000C1AF3B /* ItemsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CAD0124C3A6E000C1AF3B /* ItemsPhoto.swift */; };
 		A27CAD0424C3A70000C1AF3B /* AddItemsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CAD0324C3A70000C1AF3B /* AddItemsPhoto.swift */; };
 		A27CAD0724C3B43F00C1AF3B /* ShowPigeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CAD0624C3B43F00C1AF3B /* ShowPigeText.swift */; };
+		A2B5480224D2247500AE6149 /* ShowPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B5480124D2247500AE6149 /* ShowPhoto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A22A8ADE24D01BC300893469 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		A27CACD924C380EF00C1AF3B /* TestToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A27CACD924C380EF00C1AF3B /* ملاحظاتي.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ملاحظاتي.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A27CACDC24C380EF00C1AF3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A27CACDE24C380EF00C1AF3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A27CACE324C380EF00C1AF3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,6 +41,7 @@
 		A27CAD0124C3A6E000C1AF3B /* ItemsPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsPhoto.swift; sourceTree = "<group>"; };
 		A27CAD0324C3A70000C1AF3B /* AddItemsPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemsPhoto.swift; sourceTree = "<group>"; };
 		A27CAD0624C3B43F00C1AF3B /* ShowPigeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPigeText.swift; sourceTree = "<group>"; };
+		A2B5480124D2247500AE6149 /* ShowPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPhoto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				A27CACDB24C380EF00C1AF3B /* TestToDo */,
+				A27CACEA24C380F100C1AF3B /* Info.plist */,
 				A27CACDA24C380EF00C1AF3B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,7 +67,7 @@
 		A27CACDA24C380EF00C1AF3B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A27CACD924C380EF00C1AF3B /* TestToDo.app */,
+				A27CACD924C380EF00C1AF3B /* ملاحظاتي.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,7 +80,6 @@
 				A27CACFC24C3A66600C1AF3B /* Views */,
 				A27CACFD24C3A67A00C1AF3B /* Data */,
 				A27CACFE24C3A68800C1AF3B /* Supporting */,
-				A27CACEA24C380F100C1AF3B /* Info.plist */,
 			);
 			path = TestToDo;
 			sourceTree = "<group>";
@@ -143,6 +145,7 @@
 				A27CACFF24C3A6CB00C1AF3B /* CategoryPhoto.swift */,
 				A27CAD0124C3A6E000C1AF3B /* ItemsPhoto.swift */,
 				A27CAD0324C3A70000C1AF3B /* AddItemsPhoto.swift */,
+				A2B5480124D2247500AE6149 /* ShowPhoto.swift */,
 			);
 			path = PHOTO;
 			sourceTree = "<group>";
@@ -164,7 +167,7 @@
 			);
 			name = TestToDo;
 			productName = TestToDo;
-			productReference = A27CACD924C380EF00C1AF3B /* TestToDo.app */;
+			productReference = A27CACD924C380EF00C1AF3B /* ملاحظاتي.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A27CACF524C3815900C1AF3B /* AddItems.swift in Sources */,
+				A2B5480224D2247500AE6149 /* ShowPhoto.swift in Sources */,
 				A27CACF324C3814200C1AF3B /* Items.swift in Sources */,
 				A27CACDD24C380EF00C1AF3B /* AppDelegate.swift in Sources */,
 				A27CAD0424C3A70000C1AF3B /* AddItemsPhoto.swift in Sources */,
@@ -375,13 +379,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6T76F9759L;
 				INFOPLIST_FILE = TestToDo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.HJD959.TestToDo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "ملاحظاتي";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -394,13 +398,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6T76F9759L;
 				INFOPLIST_FILE = TestToDo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.HJD959.TestToDo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "ملاحظاتي";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
